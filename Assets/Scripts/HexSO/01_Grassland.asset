@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a14acda4ecdb1a4d96ef75c9f6d6386, type: 3}
+  m_Name: 01_Grassland
+  m_EditorClassIdentifier: 
+  hexName: Grassland
+  type: 1
+  terrainSprites:
+  - {fileID: 21300000, guid: 82da5ddd2fd0a144a9ef7c39b22ab023, type: 3}
+  - {fileID: 21300000, guid: 8c40f6718f2212744b1ef7d480efe531, type: 3}
+  - {fileID: 21300000, guid: 16297603a4211fe40a7cfeb61806efb5, type: 3}
+  - {fileID: 21300000, guid: 81e8acae0f598b94ca10d27eeb620c29, type: 3}
+  forestSprites:
+  - {fileID: 21300000, guid: ddfca7b0fb530684db2a990c667a2992, type: 3}
+  - {fileID: 21300000, guid: 21182d0de91328a47969bcc28f6d8198, type: 3}
+  - {fileID: 21300000, guid: 6d14966b16eed0c49901d728e7fd4d0f, type: 3}
+  - {fileID: 21300000, guid: c619c9accc45e1e4cbe7b445f9652a9a, type: 3}
+  resourceYield: 0300000000000000050000000000000005000000050000000000000000000000
+  moveCost: 1

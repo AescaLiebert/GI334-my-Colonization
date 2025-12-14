@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a14acda4ecdb1a4d96ef75c9f6d6386, type: 3}
+  m_Name: 02_Prairie
+  m_EditorClassIdentifier: 
+  hexName: Prairie
+  type: 2
+  terrainSprites:
+  - {fileID: 21300000, guid: ef2055d4696c0174a92142e90ead730a, type: 3}
+  - {fileID: 21300000, guid: 47230fa983a56c744aa58f1edeeb73e7, type: 3}
+  - {fileID: 21300000, guid: 2b1ff02df561b6b489cf1c3b3f0d81a1, type: 3}
+  forestSprites:
+  - {fileID: 21300000, guid: 16b2c6bcfc0f3c14582bd804a897d54c, type: 3}
+  - {fileID: 21300000, guid: 16b2c6bcfc0f3c14582bd804a897d54c, type: 3}
+  - {fileID: 21300000, guid: 0ff889bc1c64f364ab838c832b4033f6, type: 3}
+  - {fileID: 21300000, guid: f87eba190b48cac4a892871165bb7922, type: 3}
+  resourceYield: 0300000000000000000000000500000004000000040000000000000000000000
+  moveCost: 1
