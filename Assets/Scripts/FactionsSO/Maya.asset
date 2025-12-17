@@ -16,6 +16,6 @@ MonoBehaviour:
   isEuropean: 0
   flagIcon: {fileID: 21300000, guid: 6a16987719636ea4e856b628f23152d4, type: 3}
   shieldIcon: {fileID: 21300000, guid: fc05381cf8481fa4faf8302023d327ef, type: 3}
-  unitIcon: {fileID: 21300000, guid: 3c8f612ca20eaba41a1772e0cf78096c, type: 3}
+  unitIcon: {fileID: 21300000, guid: b630fabbaadc5944389ceec584d8f41b, type: 3}
   townIcon: {fileID: 21300000, guid: abee968a8121ac844a9e7f3f00130d4d, type: 3}
-  leaderSprite: {fileID: 21300000, guid: ecc917570c1ed804d849b12c2f16e882, type: 3}
+  leaderSprite: {fileID: 21300000, guid: 2d19d55f45f4f044b935b5c8f40ca6dc, type: 3}

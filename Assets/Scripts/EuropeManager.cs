@@ -71,12 +71,22 @@ public class EuropeManager : MonoBehaviour
     {
         ShipInTransit shipInTransit = new ShipInTransit(curShip, EUROPE_DISTANCE);
         shipsToEurope.Add(shipInTransit);
+        Debug.Log($"EuropeManager: Ship {curShip.UnitName} added to shipsToEurope. Distance: {EUROPE_DISTANCE}");
 
         GameManager.instance.LeaveSeenFogAroundUnit(curShip);
         curShip.CurHex.UnitsInHex.Remove(curShip);
         curShip.CurHex = null;
         curShip.gameObject.SetActive(false);
         curShip.UnitStatus = UnitStatus.Hidden;
+
+        if (GameManager.instance.CurUnit == curShip)
+        {
+            GameManager.instance.CurUnit = null;
+            UIManager.instance.UpdateUnitInfo(null);
+            
+            // Auto-select next unit to avoid "disappearing" feeling
+            GameManager.instance.SelectNextPlayerUnit();
+        }
     }
 
     public void UpdateShipInTransitTurn()

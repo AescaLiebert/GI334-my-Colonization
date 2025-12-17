@@ -27,6 +27,7 @@ public class DialogManager : MonoBehaviour
 
     public void YesGoToEurope()
     {
+        Debug.Log("DialogManager: YesGoToEurope clicked.");
         dialogs[0].Close();
         EuropeManager.instance.AllowToGoToEurope();
     }

@@ -15,7 +15,7 @@ MonoBehaviour:
   id: 0
   productName: Food
   icons:
-  - {fileID: 21300000, guid: 08a6e92ba976f2d419531a5c7a0fe6e9, type: 3}
   - {fileID: 21300000, guid: 602bb93c49e9c8d428583efdd7f5bf40, type: 3}
+  - {fileID: 21300000, guid: e7b9d86e16c5dd24cb9296c21945eb50, type: 3}
   startBid: 2
   startAsk: 8

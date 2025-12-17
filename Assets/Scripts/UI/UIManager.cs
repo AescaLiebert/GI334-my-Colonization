@@ -160,8 +160,17 @@ public class UIManager : MonoBehaviour
 
     public void UpdateUnitInfo(Unit unit)
     {
-        if (unitInfoPanel != null)
-            unitInfoPanel.UpdateInfo(unit);
+        if (unitInfoPanel == null)
+            return;
+
+        // Failsafe: Do not show Unit Info if Town or Europe panels are active
+        if (townPanel.activeInHierarchy || europePanel.activeInHierarchy)
+        {
+            unitInfoPanel.UpdateInfo(null);
+            return;
+        }
+
+        unitInfoPanel.UpdateInfo(unit);
     }
 
     void Awake()
@@ -188,6 +197,8 @@ public class UIManager : MonoBehaviour
 
     public void ToggleTownPanel(bool show)
     {
+        townPanel.SetActive(show);
+
         if (show == false)
         {
             DestroyOldUnitDrag();
@@ -196,9 +207,18 @@ public class UIManager : MonoBehaviour
             DeleteAllCargoDragsInSlots(cargoSlots);
             DestroyAllShipIcons();
             DisableAllCargoSlots(cargoSlots);
+
+            // Restore Unit Info Panel if unit is selected
+            if (GameManager.instance.CurUnit != null)
+                UpdateUnitInfo(GameManager.instance.CurUnit);
         }
-        townPanel.SetActive(show);
+        else
+        {
+            // Hide Unit Info Panel
+            UpdateUnitInfo(null);
+        }
     }
+
 
     public void SetupHexSlots(Hex centerHex, Hex[] aroundHexes)
     {
@@ -613,18 +633,25 @@ public class UIManager : MonoBehaviour
 
     public void ToggleEuropePanel(bool flag)
     {
+        europePanel.SetActive(flag);
+        
         if (flag == false)
         {
             DestroyAllShipsEuropeIcons();
             DisableAllCargoSlots(cargoSlotsEurope);
-            europePanel.SetActive(false);
             inEurope = false;
+            
+            // Restore Unit Info Panel if unit is selected
+            if (GameManager.instance.CurUnit != null)
+                UpdateUnitInfo(GameManager.instance.CurUnit);
         }
         else
         {
             townPanel.SetActive(false);
-            europePanel.SetActive(true);
             inEurope = true;
+            
+            // Hide Unit Info Panel
+            UpdateUnitInfo(null);
 
             SetupShipsToEurope(EuropeManager.instance.ShipsToEurope);
             SetupShipsFromEurope(EuropeManager.instance.ShipsFromEurope);

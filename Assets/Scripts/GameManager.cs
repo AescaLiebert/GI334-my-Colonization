@@ -148,13 +148,19 @@ public class GameManager : MonoBehaviour
             ToggleHexText();
 
         if (Input.GetKeyDown(KeyCode.Tab))
+        {
+            Debug.Log("GameManager: Tab pressed.");
             SelectNextPlayerUnit();
+        }
 
         if (Input.GetKeyDown(KeyCode.Backspace))
             Endturn();
 
         if (Input.GetKeyDown(KeyCode.E))
+        {
+            Debug.Log("GameManager: E pressed.");
             EuropePanel();
+        }
     }
 
     private void SetUpFaction()
@@ -431,7 +437,7 @@ public class GameManager : MonoBehaviour
         return true;
     }
 
-    private void SelectNextPlayerUnit()
+    public void SelectNextPlayerUnit()
     {
         int curId = FindIndexOfCurUnit();
         
@@ -475,6 +481,7 @@ public class GameManager : MonoBehaviour
         if (curUnit != null)
         {
             curUnit.ToggleBorder(false, Color.green);
+            curUnit = null; // Clear selection
             // Hide Unit Info UI
             UIManager.instance.UpdateUnitInfo(null);
         }
@@ -753,6 +760,7 @@ public class GameManager : MonoBehaviour
 
     public void EuropePanel()
     {
+        Debug.Log("GameManager: EuropePanel called.");
         UIManager.instance.CheckEuropePanel();
     }
 

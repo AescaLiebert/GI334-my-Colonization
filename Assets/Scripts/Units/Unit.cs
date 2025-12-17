@@ -245,7 +245,10 @@ public abstract class Unit : MonoBehaviour
             StayOnHex(targetHex);
 
             if (faction == gameMgr.PlayerFaction)
+            {
                 gameMgr.ClearDarkFogAroundEveryUnit(faction);
+                UIManager.instance.UpdateUnitInfo(this);
+            }
         }
     }
 

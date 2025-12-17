@@ -17,15 +17,15 @@ public class UnitInfoPanel : MonoBehaviour
 
     public void UpdateInfo(Unit unit)
     {
+        GameObject targetObj = contentParent != null ? contentParent : gameObject;
+
         if (unit == null)
         {
-            if (contentParent != null)
-                contentParent.SetActive(false);
+            targetObj.SetActive(false);
             return;
         }
 
-        if (contentParent != null)
-            contentParent.SetActive(true);
+        targetObj.SetActive(true);
 
         if (unitIconImage != null && unit.UnitSprite != null)
             unitIconImage.sprite = unit.UnitSprite.sprite;
@@ -34,7 +34,7 @@ public class UnitInfoPanel : MonoBehaviour
             unitNameText.text = unit.UnitName;
 
         if (movePointText != null)
-            movePointText.text = $"MP: {unit.MovePoint}/{unit.MovePointMax}";
+            movePointText.text = $"MP: {unit.MovePoint}";
 
         if (strengthText != null)
             strengthText.text = $"STR: {unit.Strength}";
@@ -49,13 +49,6 @@ public class UnitInfoPanel : MonoBehaviour
             // Example: Show armed status
             if (armedStatusObj != null)
             {
-                // Assuming we might have an IsArmed property or similar in the future, 
-                // for now we can rely on data or just hide it.
-                // Based on LandUnitData, there is 'armed' bool.
-                // But LandUnit itself might not expose it directly easily without checking Data.
-                // Let's check if we can access Data.
-                // unit doesn't strictly hold reference to LandUnitData publically in base Unit?
-                // Let's check Unit.cs later. For now, basic info is good.
                 armedStatusObj.SetActive(false); 
             }
         }
