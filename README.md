@@ -6,12 +6,11 @@ Change Log (สำหรับอาจารย์ว่าเปลี่ย�
 
 - ✅ myTerrain
 - ✅ myItemIcon
-- ✅ myUnit
-- ✅ myEurope & myTown UI
+- ✅ myUnit & Navel
+- ✅ myEurope UI
 - ✅ myMainMenu & myChooseFaction
 - ✅ myPoPUpDialog
 - ✅ myCutscene
-- ✅ myBuilding
 
 ### UI Function
 
@@ -28,26 +27,3 @@ Change Log (สำหรับอาจารย์ว่าเปลี่ย�
     - [ ]  Modal Window (Tutorial Pop Window)
     - [ ]  Dialog Animation + Fix
     - [ ]  Fix World-Tile Sorting Order Bug
-    - [ ]  Header (Coin, Time, End Turn Suggestion)
-
-### Game Function
-
-- Cutscene (Text Animation)(Lapse)
-- World UI (Move Point)(Unit on Board)(Item on Cargo)(Unit&Naval Status UI)(End Turn Suggestion)(Time Scale)
-- Dialogue (Animation)
-- Town (Product Chain System)(Product Path UI)
-- Combat(?)
-- Europe(?) (Price Fluctuation?)(Price Negotiation)(Reputation?)(Europe Item Quest(King) for a Reputation)
-
-### Sound / Music
-
-- Button Click
-- World Map Main Theme
-- Pop up SFX / Event SFX
-- Town / Europe Theme
-
-### Serious Game Design Added
-
-- Control Tutorial ←
-- Suggestion End-turn ←
-- Unit Role & Control Tutorial ←
